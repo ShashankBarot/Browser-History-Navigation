@@ -2,6 +2,15 @@
 
 :root { --void:#000; --carbon:#1c1c1c; --graphite:#4d4d4d; --steel:#808080; --ash:#ababab; --paper:#fff; --peri:#7089ba; --mono:'DM Mono',monospace; --display:'Space Grotesk',sans-serif; }
 * { box-sizing:border-box; }
+
+/* ── Custom scrollbar ─────────────────────────────────────────────── */
+::-webkit-scrollbar { width:6px; height:6px; }
+::-webkit-scrollbar-track { background:#000; border-radius:999px; }
+::-webkit-scrollbar-thumb { background:var(--graphite); border-radius:999px; border:1px solid #111; transition:background .2s; }
+::-webkit-scrollbar-thumb:hover { background:var(--peri); box-shadow:0 0 6px rgba(0,233,255,.35); }
+::-webkit-scrollbar-corner { background:#000; }
+* { scrollbar-width:thin; scrollbar-color:var(--graphite) #000; }
+
 html, body { margin:0; min-height:100%; background:var(--void); color:var(--paper); font-family:var(--display); }
 button, input { font:inherit; }
 button { color:inherit; cursor:pointer; }
